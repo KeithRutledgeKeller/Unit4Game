@@ -1,6 +1,8 @@
 body{
     padding-left: 15px;
     padding-top: 15px;
+    background-image: ("pacman.png");
+
 }
 
 .head{
@@ -45,8 +47,7 @@ body{
 }
 
 .row{
-    background-color: grey;
-    width: 33%;
+    width: 50%;
     height: 105px;
     margin-top: 10px;
 }

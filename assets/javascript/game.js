@@ -9,58 +9,70 @@ var c4 = 0;
 
 var totalScore = 0;
 
-// document.onkeyup = function ...
-// First, detect a key change (or a guess)
-// add that guess to the guesses so far
-// validate a guess 
-// if correct increment a win and reset game
-// else decrement guessesLeft 
-// if guessesLeft = 0 mark a lose reset game
 
-document.onclick = function (event) {
+function add(crystal) {
+    switch (crystal) {
+        case "c1":
+            totalScore += c1
+            break;
+        case "c2":
+            totalScore += c2
+            break;
+        case "c3":
+            totalScore += c3
+            break;
+        case "c4":
+            totalScore += c4
+            break;
+    }
 
-    var letter = event.key.toLowerCase();
-
-    if (guessesSoFar.includes(letter)) return
-   
-    guessesSoFar.push(letter)
-
-    if (letter === correctLetter) {
-        wins++;
+    if (totalScore === randomStartNumber) {
+        wins++
         resetGame()
     }
 
-    else {
-        guessesLeft--
-        if (guessesLeft === 0) {
-            losses++
-            resetGame()
-        }
+    if (totalScore > randomStartNumber) {
+        losses++
+        resetGame()
     }
 
     updateText()
 }
 
+
 function randomStartNumber() {
-    var number = ""
-    var index = Math.floor(Math.random() * number)
-    var letter = letters.charAt(index);
-    return letter;
+    return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+}
+
+function randomNumber() {
+    return Math.ceil(Math.random() * 12)
 }
 
 function resetGame() {
-    
+    startNumber = randomStartNumber()
+    c1 = randomNumber()
+    c2 = randomNumber()
+    c3 = randomNumber()
+    c4 = randomNumber()
+    totalScore = 0
+
 }
 
 function updateText() {
-    document.getElementById("wins").innerHTML = wins
-    document.getElementById("losses").innerHTML = losses
-    document.getElementById("").innerHTML = startNumber
-    document.getElementById("").innerHTML = totalScore
+    $("#wins").text(wins)
+    $("#losses").text(losses)
+    $("#startNumber").text(startNumber)
+    $("#totalScore").text(totalScore)
 }
 
 
 
-document.onreadystatechange = function() {
-    if (document.readyState === 'complete') updateText()
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+        updateText()
+        $("#c1").click(add("c1"))
+        $("#c2").click(add("c2"))
+        $("#c3").click(add("c3"))
+        $("#c4").click(add("c4"))
+    }
 }
