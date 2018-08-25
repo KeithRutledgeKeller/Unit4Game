@@ -29,6 +29,7 @@ body{
     height: 100px;
     color: white;
     margin-top: 10px;
+    float: left;
 }
 
 .winsLosses{
@@ -39,6 +40,8 @@ body{
     margin-top: 10px;
     padding-top: 15px;
     color: white;
+    right: -40px;
+    overflow: auto;
 }
 
 .row{
