@@ -1,0 +1,65 @@
+body{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.head{
+    position: relative;
+    background-color: crimson;
+    width: 25%;
+    height: 95px;
+    color: aqua;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.section{
+    position: relative;
+    background-color: darkgrey;
+    margin-top: 10px;
+    width: 40%;
+    padding: 20px;
+    height: 50%;
+    color: white
+}
+
+.startNumber{
+    background-color: darkolivegreen;
+    width: 20%;
+    height: 100px;
+    color: white;
+    margin-top: 10px;
+}
+
+.winsLosses{
+    position: relative;
+    background-color: darkcyan;
+    width: 5%;
+    height: 100px;
+    margin-top: 10px;
+    padding-top: 15px;
+    color: white;
+}
+
+.row{
+    background-color: grey;
+    width: 33%;
+    height: 105px;
+    margin-top: 10px;
+}
+
+.total{
+    background-color: darkcyan;
+    margin-top: 10px;  
+    width: 33%;
+    color: white;
+}
+
+.totalScore{
+    background-color: darkcyan;
+    width: 20%;
+    height: 100px;
+    color: white;
+    margin-top: 0px;
+}
+

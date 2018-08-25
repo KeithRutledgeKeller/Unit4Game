@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title>Crystal Game</title>
+
+
+</head>
+
+
+<body>
+
+    <h1 class="head">Crystal Collector</h1>
+    <div class="section">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amout of points to you total score</p>
+        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above
+            the random number</p>
+        <p>The value of each crystal is hidden from you until you click on it</p>
+        <p>Each time when the game starts, the game will change the values of each crystal</p>
+    </div>
+
+    <div class="startNumber" id="startNumber">0</div>
+    <div class="winsLosses">
+        <p>Wins: <text id="wins">0</text> </p>
+        <p>Loses: <text id="loses">0</text></p>
+    </div>
+    <div class="row" class="images">
+        <div class="col" id="c1" class="c1"><img src="assets/images/c1.png" alt="A Crystal"></div>
+        <div class="col" id="c2" class="c2"><img src="assets/images/c2.png" alt="A Crystal"></div>
+        <div class="col" id="c3" class="c3"><img src="assets/images/c3.png" alt="A Crystal"></div>
+        <div class="col" id="c4" class="c4"><img src="assets/images/c4.png" alt="A Crystal"></div>
+    </div>
+    <div class="total">
+        <p>Your total score is:</p>
+    </div>
+    <div class="totalScore" id="totalScore">0</div>
+
+</body>
+
+</html>
