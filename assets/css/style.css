@@ -1,32 +1,27 @@
 body{
     padding-left: 15px;
     padding-top: 15px;
-    background-image: ("pacman.png");
+    background-image: url("pacman.png");
 
 }
 
 .head{
     position: relative;
-    background-color: crimson;
     width: 25%;
     height: 95px;
     color: aqua;
-    text-align: center;
-    padding-top: 15px;
+    text-align: left;
+    padding-top: 45px;
 }
 
 .section{
     position: relative;
-    background-color: darkgrey;
-    margin-top: 10px;
     width: 40%;
-    padding: 20px;
     height: 50%;
     color: white
 }
 
 .startNumber{
-    background-color: darkolivegreen;
     width: 20%;
     height: 100px;
     color: white;
@@ -36,8 +31,7 @@ body{
 
 .winsLosses{
     position: relative;
-    background-color: darkcyan;
-    width: 5%;
+    width: 10%;
     height: 100px;
     margin-top: 10px;
     padding-top: 15px;
@@ -53,17 +47,14 @@ body{
 }
 
 .total{
-    background-color: darkcyan;
     margin-top: 10px;  
     width: 33%;
     color: white;
 }
 
 .totalScore{
-    background-color: darkcyan;
     width: 20%;
     height: 100px;
     color: white;
     margin-top: 0px;
 }
-

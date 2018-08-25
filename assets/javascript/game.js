@@ -1,6 +1,6 @@
 var startNumber = 0;
 var wins = 0;
-var loses = 0;
+var losses = 0;
 
 var c1 = 0;
 var c2 = 0;
@@ -26,12 +26,12 @@ function add(crystal) {
             break;
     }
 
-    if (totalScore === randomStartNumber) {
+    if (totalScore === startNumber) {
         wins++
         resetGame()
     }
 
-    if (totalScore > randomStartNumber) {
+    if (totalScore > startNumber) {
         losses++
         resetGame()
     }
@@ -67,12 +67,20 @@ function updateText() {
 
 
 
-document.onreadystatechange = function () {
-    if (document.readyState === 'complete') {
-        updateText()
-        $("#c1").click(add("c1"))
-        $("#c2").click(add("c2"))
-        $("#c3").click(add("c3"))
-        $("#c4").click(add("c4"))
-    }
-}
+$(document).ready(function () {
+    console.log('starting...');
+    resetGame()
+    updateText()
+    $("#c1").click(function () {
+        add('c1')
+    })
+    $("#c2").click(function () {
+        add('c2')
+    })
+    $("#c3").click(function () {
+        add('c3')
+    })
+    $("#c4").click(function () {
+        add('c4')
+    })
+});
